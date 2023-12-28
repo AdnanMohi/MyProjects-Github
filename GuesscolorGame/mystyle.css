@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+  
+    background-color: rgb(203, 186, 186);      
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+#nav{
+    margin-top: 5px;
+    height: 150px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    background-color: rgb(234, 227, 222);
+    
+}
+#mid{
+    height: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(56, 141, 141);
+    text-align: center;
+    align-content:center ;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    
+}
+
+
+#options-container {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+   justify-content: center; 
+   background-color:rgb(217, 231, 231);
+   height:350px;
+   
+  
+}
+
+#bottom {
+    height: 435px;
+    position: auto;
+    bottom: auto;
+    width: 100%;
+    background-color:rgb(217, 231, 231);
+   text-align: center;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+#restart-button{
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    align-self:center ;
+    background-color: rgb(184, 168, 149);
+}
+#score-button{
+    border-radius: 5px;
+    width: 160px;
+    height: 40px;
+    align-self:center ;
+    background-color: rgb(184, 168, 149);
+}
+#options-container > div {
+    border: 2px solid;
+    height: auto;
+    width:  150px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#options-container > div:hover {
+transform:scale(1.2);
+transition: 0.5s;
+}
