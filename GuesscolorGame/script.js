@@ -6,6 +6,29 @@ let score=0;
 const scoreContainer = document.getElementById('score')
 const resstartButton = document.getElementById('restart-button')
 
+const bgMusic = document.getElementById('bgMusic');
+  const musicIcon = document.getElementById('musicIcon');
+  const correctSound = document.getElementById('correctSound');
+
+  musicIcon.addEventListener('click', () => {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      musicIcon.classList.remove('fa-play');
+      musicIcon.classList.add('fa-pause');
+    } else {
+      bgMusic.pause();
+      musicIcon.classList.remove('fa-pause');
+      musicIcon.classList.add('fa-play');
+    }
+  });
+function playCorrectSound() {
+    // Play the audio
+    correctSound.play();
+}
+
+  
+
+
 function generateRandomNumberBetween(min,max) {
     return min + Math.floor(Math.random() * (max - min +1))
 }
@@ -15,7 +38,9 @@ function validateReusult(el){
 console.log(el.target)
 console.log(selectedColor === randomColor);
 if(selectedColor === randomColor){
+    document.getElementById('correctSound').play();
     incrementScore();
+    
 }else{
 
     score -=1;
@@ -41,12 +66,18 @@ function incrementScore(){
 }
 
 
+
+
+
+
 function generateRandomColorRGB(){
 const red = generateRandomNumberBetween(0, 255);
 const green = generateRandomNumberBetween(0, 255);
 const blue = generateRandomNumberBetween(0, 255);
 return `rgb(${red}, ${green}, ${blue})`;
 }
+
+
 
 //console.log(generateRandomColorRGB(0,255));
 
