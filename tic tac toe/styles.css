@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(176, 177, 174);
+}
+.h-container{
+   text-align:center ;
+   margin-top: 100px;
+}
+.container {
+    margin-top: 70px;
+   
+}
+.col{
+   height: 100px;
+   width: 100px;
+   border: 2px solid black;
+  
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    
+}
